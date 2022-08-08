@@ -1,8 +1,11 @@
+import Body from "./components/Body/Body";
+// import Login from "./components/Login/Login.jsx";
 const App = () => {
   return (
-    <div className="App">
-      <h1>Wepa</h1>
-    </div>
+    <>
+      {/* <Login /> */}
+      <Body />
+    </>
   );
 };
 
