@@ -29,7 +29,7 @@ export const Option = styled.li`
   cursor: pointer;
   list-style-type: none;
   color: white;
-  opacity: 0.5;
+  opacity: 0.8;
   &:hover {
     opacity: 1;
   }
