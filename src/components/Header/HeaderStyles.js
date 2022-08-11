@@ -18,20 +18,28 @@ export const End = styled.div`
   display: flex;
   flex: 1;
   justify-content: flex-end;
+  padding-right: 23px;
 `;
 
 export const Profile = styled.div`
   display: flex;
   align-items: center;
-  padding: 5px 25px;
+  padding: 1px 1px;
+  background-color: black;
+  border-radius: 50px;
+  opacity: 0.9;
 `;
 
 export const ProfileImagen = styled.img`
-  width: 32px;
+  width: 30px;
   border-radius: 50%;
   padding-right: 6px;
 `;
 
 export const ProfileName = styled.h5`
-  padding-right: 20px;
+  padding-right: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
 `;
