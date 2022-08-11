@@ -15,7 +15,9 @@
     "react-redux": "^8.0.2",
     "react-scripts": "5.0.1",
     "redux": "^4.2.0",
+    "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.4.1",
+    "spotify-web-api-js": "^1.5.2",
     "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"
   },
