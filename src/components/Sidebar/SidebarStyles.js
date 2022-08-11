@@ -50,3 +50,31 @@ export const Line = styled.hr`
   opacity: 0.2;
   background-color: black;
 `;
+
+export const AllPlaylist = styled.section`
+  margin-top: 20px;
+  height: 180px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 12px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 2px;
+  }
+
+  & p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: white;
+    opacity: 0.8;
+    padding: 7px 0px;
+    &:hover {
+      opacity: 1;
+    }
+  }
+`;
