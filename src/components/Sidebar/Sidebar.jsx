@@ -3,11 +3,16 @@ import LogoWhite from "../../assets/Spotify_Logo_White.png";
 import IconHome from "../../assets/home-free-icon-font.png";
 import IconSearch from "../../assets/search-free-icon-font.png";
 import IconLibrary from "../../assets/books-free-icon-font.png";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
+import { GET_TRACKS } from "../../redux/slice.getTracks";
 const Sidebar = () => {
   const userPlaylist = useSelector((state) => state.playlist.playlist);
+  const allTracks = useSelector((state) => state.tracklist.tracklist);
   const [playlist, setPlaylist] = useState(null);
+  const dispatch = useDispatch();
+
+  console.log("TODOS LOS TRACKS=>", allTracks);
 
   useEffect(() => {
     if (userPlaylist) setPlaylist(userPlaylist.items);
@@ -38,7 +43,16 @@ const Sidebar = () => {
           {playlist ? (
             playlist.map((ele) => {
               // console.log("CADA PLAY->",ele);
-              return <p key={ele.id}>{ele.name}</p>;
+              return (
+                <p
+                  onClick={() => {
+                    dispatch(GET_TRACKS({ ele }));
+                  }}
+                  key={ele.id}
+                >
+                  {ele.name}
+                </p>
+              );
             })
           ) : (
             <p>Cargando listas...</p>
