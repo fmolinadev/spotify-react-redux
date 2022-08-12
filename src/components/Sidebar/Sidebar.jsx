@@ -37,7 +37,7 @@ const Sidebar = () => {
         <Styles.AllPlaylist>
           {playlist ? (
             playlist.map((ele) => {
-              console.log(ele);
+              // console.log("CADA PLAY->",ele);
               return <p key={ele.id}>{ele.name}</p>;
             })
           ) : (

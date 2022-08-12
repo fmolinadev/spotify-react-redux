@@ -25,7 +25,7 @@ export const AllOptions = styled.ul`
 
 export const Option = styled.li`
   padding-bottom: 16px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Helvetica", sans-serif;
   cursor: pointer;
   list-style-type: none;
   color: white;
@@ -66,9 +66,9 @@ export const AllPlaylist = styled.section`
   }
 
   & p {
-    font-family: "Montserrat", sans-serif;
-    font-size: 11px;
-    letter-spacing: 1px;
+    font-family: "Helvetica", sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.8px;
     cursor: pointer;
     color: white;
     opacity: 0.8;
