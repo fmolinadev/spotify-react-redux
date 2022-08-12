@@ -7,6 +7,7 @@ import thunk from "redux-thunk";
 import { userPlaylist } from "./slice.playlist";
 import { userTopArtist } from "./slice.top";
 import { userRecent } from "./slice.recent";
+import { getTracksPlaylist } from "./slice.getTracks";
 
 export default configureStore(
   {
@@ -16,6 +17,7 @@ export default configureStore(
       playlist: userPlaylist.reducer,
       top: userTopArtist.reducer,
       recent: userRecent.reducer,
+      tracklist: getTracksPlaylist.reducer,
     },
   },
   composeWithDevTools(applyMiddleware(thunk))
