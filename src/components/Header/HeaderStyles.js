@@ -2,23 +2,30 @@ import styled from "styled-components";
 
 export const Container = styled.header`
   display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 999;
   width: 100%;
-  height: 40px;
+  height: 55px;
   align-items: center;
   justify-content: space-between;
-  margin: 12px 0px;
+  background-color: #002321;
+  padding-left: 28px;
 `;
 
 export const Start = styled.div`
   display: flex;
   justify-content: flex-start;
+  padding-top: 6px;
 `;
 
 export const End = styled.div`
   display: flex;
   flex: 1;
   justify-content: flex-end;
-  padding-right: 23px;
+  padding-right: 55px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 `;
 
 export const Profile = styled.div`

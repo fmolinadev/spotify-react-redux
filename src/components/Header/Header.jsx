@@ -1,16 +1,10 @@
 import * as Styles from "./HeaderStyles";
 import Avatar from "../../assets/placeholder_profile.png";
 import { useSelector } from "react-redux";
-import { useEffect, useState } from "react";
 
 const Header = () => {
-  const profileInfo = useSelector((state) => state.user.user);
-  console.log("DATA USER=>", profileInfo);
-  const [userInfo, setUserInfo] = useState(null);
-
-  // useEffect(() => {
-  //   if (profileInfo) setUserInfo(profileInfo);
-  // }, [profileInfo]);
+  const userInfo = useSelector((state) => state.user.user);
+  // console.log("DATA PROFILE=>", userInfo);
 
   return (
     <Styles.Container>
@@ -18,13 +12,12 @@ const Header = () => {
       <Styles.End>
         <Styles.Profile>
           <Styles.ProfileImagen
-            src={profileInfo.images[0].url ? profileInfo.images[0].url : Avatar}
+            src={userInfo != null ? userInfo.images[0].url : Avatar}
             alt="user profile"
           />
+
           <Styles.ProfileName>
-            {profileInfo.display_name
-              ? profileInfo.display_name
-              : "Spotify User"}
+            {userInfo != null ? userInfo.display_name : "Loading user name"}
           </Styles.ProfileName>
         </Styles.Profile>
       </Styles.End>
